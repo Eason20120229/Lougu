@@ -1,0 +1,628 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fin",
+				"findStr"
+			],
+			[
+				"un",
+				"unsigned"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "1.cpp",
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Cache/JavaScript/Nodejs.sublime-build",
+					""
+				],
+				[
+					"Cache/JavaScript/Nodejs.sublime-build",
+					"Run In Terminus"
+				],
+				[
+					"Cache/JavaScript/Nodejs.sublime-build",
+					"Run in CMD"
+				]
+			],
+			[
+				"Cache/JavaScript/Nodejs.sublime-build",
+				"Run in CMD"
+			]
+		],
+		[
+			[
+				[
+					"Cache/JavaScript/Nodejs.sublime-build",
+					""
+				],
+				[
+					"Cache/JavaScript/Nodejs.sublime-build",
+					"Run In Terminus"
+				],
+				[
+					"Cache/JavaScript/Nodejs.sublime-build",
+					"Run in CMD"
+				],
+				[
+					"Cache/JavaScript/Nodejs.sublime-build",
+					"Run in Sublime"
+				]
+			],
+			[
+				"Cache/JavaScript/Nodejs.sublime-build",
+				"Run in CMD"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Cache/C++/Cpp.sublime-build",
+					""
+				],
+				[
+					"Cache/C++/Cpp.sublime-build",
+					"Run In Terminus"
+				],
+				[
+					"Cache/C++/Cpp.sublime-build",
+					"Run in CMD"
+				],
+				[
+					"Cache/C++/Cpp.sublime-build",
+					"Run in Sublime"
+				]
+			],
+			[
+				"Cache/C++/Cpp.sublime-build",
+				"Run in CMD"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Cpp.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Cpp.sublime-build",
+					"Run In Terminus"
+				],
+				[
+					"Packages/User/Cpp.sublime-build",
+					"Run in CMD"
+				],
+				[
+					"Packages/User/Cpp.sublime-build",
+					"Run in Sublime"
+				]
+			],
+			[
+				"Packages/User/Cpp.sublime-build",
+				"Run in CMD"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Cpp.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Cpp.sublime-build",
+					"Run In Terminus"
+				],
+				[
+					"Packages/User/Cpp.sublime-build",
+					"Run in CMD"
+				],
+				[
+					"Packages/User/Cpp.sublime-build",
+					"Run in Sublime"
+				]
+			],
+			[
+				"Packages/User/Cpp.sublime-build",
+				"Run in CMD"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/MyPython.sublime-build",
+					""
+				],
+				[
+					"Packages/User/MyPython.sublime-build",
+					"CmdRun"
+				]
+			],
+			[
+				"Packages/User/MyPython.sublime-build",
+				"CmdRun"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/MyPython.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/MyPython.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/MyPython.sublime-build",
+					""
+				],
+				[
+					"Packages/User/MyPython.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/MyPython.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"UI",
+				"UI: Select Color Scheme"
+			],
+			[
+				"material theme",
+				"Material Theme: Activate theme"
+			],
+			[
+				"packa",
+				"Package Control: User CA bundle"
+			],
+			[
+				"Termin",
+				"Terminus: Open Default Shell in Panel"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 132.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Eason/Code/C++/Lougu/2024.5.12/AC.cpp",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text/Packages/User/Cpp.sublime-build",
+		"/D/Eason/Code/C++/C++Code/2024.4.21/1085.cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.12/AC.cpp",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text/Packages/User/Package Control.user-ca-bundle",
+		"/D/Eason/Code/C++/C++Code/2024.5.12/1568.cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.12/1568(2).cpp",
+		"/D/Eason/Code/C++/C++Code/C++Code.sublime-project",
+		"/D/Eason/Code/C++/C++Code/ww.cpp",
+		"/D/Eason/Code/C++/C++Code/ss.cpp",
+		"/D/Eason/Code/C++/C++Code/aa.cpp",
+		"/D/Eason/Code/1.sublime-project",
+		"/D/Eason/Code/c++/C++Code/2024.5.12/1568.cpp",
+		"/D/Eason/Code/C++/C++Code/.clang-format",
+		"/D/Eason/Code/C++/C++Code/.clang-tidy",
+		"/D/Eason/Code/C++/C++Code/2024.5.12/Trie.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.5.2/KMP.cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.2/KMP2.cpp",
+		"/D/Eason/Code/c++/Lougu/T442476/A.cpp",
+		"/D/Eason/Code/Python/manim/2s.py",
+		"/D/Eason/Code/Python/manim/cut music.py",
+		"/D/Eason/Code/Python/manim/1(0-22000).mp3",
+		"/D/Eason/Code/Python/manim/2()2.py",
+		"/D/Eason/Code/Python/manim/1.mp3",
+		"/D/Eason/Code/Python/manim/1().mp3",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text/Packages/Anaconda/Anaconda.sublime-settings",
+		"/D/Eason/Code/C++/Lougu/1014.cpp",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text/Packages/User/MyPython.sublime-build",
+		"/D/Eason/Code/c++/Lougu/1011.cpp",
+		"/D/Eason/Code/c++/Lougu/1010.cpp",
+		"/D/Eason/Code/C++/Lougu/1319.cpp",
+		"/D/Eason/Code/C++/Lougu/1304.cpp",
+		"/D/Eason/Code/Python/manim/2.py",
+		"/D/Eason/Code/Python/manim/try.py",
+		"/D/Eason/Code/Python/manim/1.py",
+		"/D/Eason/Code/C++/Lougu/1098.cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.2/1100.cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.2/5288(0).cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.2/5292(3).cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.2/1300.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.5.2/1300().cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.2/KMP.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.5.2/5288.cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.2/5288.cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.2/5292.cpp",
+		"/D/Eason/Code/C++/C++Code/2024.5.2/5292(2).cpp",
+		"/D/Eason/Code/C++/Lougu/1012.cpp",
+		"/D/Eason/Code/C++/Lougu/1003.cpp",
+		"/D/Eason/Code/C++/Lougu/1.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.21/1143.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.21/Garsia Wachs.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.21/P1775.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.21/1661.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.14/bigint''.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.21/1085.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.14/bigint+.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.14/bigint--.cpp",
+		"/D/Eason/Code/c++/C++Code/ss.cpp",
+		"/D/Eason/Code/c++/C++Code/ww.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.14/bigintx.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.4.14/bigint--.exe",
+		"/D/Eason/Code/c++/C++Code/1.txt",
+		"/D/Eason/Code/c++/Tedu.cn/Class/23.10.29/快排(new,quickly).cpp",
+		"/D/Eason/Code/nasm-2.16.02rc9/18176/source/topic02/ex2-1/setup.asm",
+		"/D/Eason/Code/nasm-2.16.02rc9/1.asm",
+		"/D/Eason/Code/Masm/3.asm",
+		"/D/Eason/Code/Masm/2.ASM",
+		"/D/Program Files (x86)/DOSBox-0.74-3/DOSBox 0.74-3 Options.bat",
+		"/D/Eason/Code/c++/C++Code/2024.3.24/33.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.3.24/4453(oj.ai).cpp",
+		"/D/Eason/Code/c++/C++Code/2024.3.24/4453map.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.1.28/链表.cpp",
+		"/D/Eason/Code/c++/Lougu/1101.cpp",
+		"/D/Eason/Code/c++/Lougu/2249.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.3.17/2249.cpp",
+		"/D/Eason/Code/c++/C++Code/aa.cpp",
+		"/D/Eason/Code/c++/C++Code/2024.3.17/1037.cpp",
+		"/D/Eason/Code/c++/C++Code/aa.exe",
+		"/C/Users/Admin/AppData/Local/Sublime Text/Cache/C++/Cpp.sublime-build",
+		"/C/TDM-GCC-64/x86_64-w64-mingw32/include/graphics.h",
+		"/D/Eason/Code/c++/Lougu/aa.cpp",
+		"/D/Eason/Code/c++/Lougu/1037.cpp",
+		"/D/Eason/Code/c++/Lougu/UVA529(2).cpp",
+		"/D/Eason/Code/c++/Lougu/UVA529.cpp",
+		"/D/Eason/Code/c++/Lougu/UVA529.cpp.bak.cpp",
+		"/D/Eason/Code/Node.js/HelloWorld.js",
+		"/C/Users/Admin/AppData/Local/Sublime Text/Cache/JavaScript/Nodejs.sublime-build",
+		"/D/Eason/Code/c++/Lougu/1731.cpp",
+		"/D/Eason/Code/Vue/mytest1/index.html",
+		"/D/Eason/Code/Vue/mytest1/src/main.js",
+		"/D/Eason/Code/c++/Lougu/sassa.cpp",
+		"/D/Eason/Code/c++/Lougu/Addition Chains.cpp",
+		"/D/Eason/Code/c++/Lougu/8813.cpp",
+		"/D/Eason/Code/Vue/mytest1/src/App.vue",
+		"/D/Eason/Code/c++/蓝桥/8754.cpp",
+		"/D/Eason/Code/c++/Lougu/B3636.cpp",
+		"/D/Eason/Code/c++/Lougu/9749.cpp",
+		"/D/Eason/Code/c++/Lougu/7071.cpp",
+		"/D/Eason/Code/c++/Lougu/5682.cpp",
+		"/D/Eason/Code/c++/Lougu/5015.cpp",
+		"/D/Eason/Code/c++/Lougu/1059.cpp",
+		"/D/Eason/Code/c++/Lougu/1067.cpp",
+		"/D/Eason/Code/c++/Lougu/1090.cpp",
+		"/D/Eason/Code/c++/Lougu/1152.cpp",
+		"/D/Eason/Code/c++/Lougu/1232113323.cpp",
+		"/D/Eason/Code/c++/Lougu/1506.cpp",
+		"/D/Eason/Code/c++/Lougu/1510.cpp",
+		"/D/Eason/Code/c++/Lougu/1706.cpp",
+		"/D/Eason/Code/c++/Lougu/1803.cpp",
+		"/D/Eason/Code/c++/Lougu/3952 DevCpp打开(GBK).cpp",
+		"/D/Eason/Code/c++/Lougu/11.cpp",
+		"/D/Eason/Code/c++/蓝桥/8723.cpp",
+		"/D/Eason/Code/c++/蓝桥/演唱会.cpp",
+		"/D/Eason/Code/c++/蓝桥/太阳黑子最大数量一直增加的最长连续年数.cpp",
+		"/D/Eason/Code/c++/蓝桥/白细胞计数.cpp",
+		"/D/Eason/Code/c++/蓝桥/.clang-format",
+		"/D/Eason/Code/c++/蓝桥/8220 计算乘积.cpp",
+		"/D/Eason/Code/c++/蓝桥/.clang-tidy",
+		"/D/Eason/Code/c++/蓝桥/计算乘积.cpp"
+	],
+	"find":
+	{
+		"height": 61.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "1.cpp",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".<>:\"/*",
+									"selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
+									"server": "clangd"
+								}
+							],
+							"is_init_dirty_state": false,
+							"lsp_active": true,
+							"lsp_uri": "file:///D:/Eason/Code/C%2B%2B/Lougu/1.cpp",
+							"show_definitions": false,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 61.0
+	},
+	"input":
+	{
+		"height": 129.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CompileWithClang":
+	{
+		"height": 648.0
+	},
+	"output.CompileWithGCC":
+	{
+		"height": 648.0
+	},
+	"output.Debugger":
+	{
+		"height": 648.0
+	},
+	"output.Debugger Console":
+	{
+		"height": 135.0
+	},
+	"output.LSP Log Panel":
+	{
+		"height": 0.0
+	},
+	"output.Terminus":
+	{
+		"height": 180.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 52.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 82.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "C++Code.sublime-project",
+	"replace":
+	{
+		"height": 118.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 214.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

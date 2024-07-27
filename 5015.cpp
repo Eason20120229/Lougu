@@ -7,7 +7,7 @@ int main(){
     int ans = s.length();
     int i = ans;
     while(--i >= 0){
-        if(s[i] == ' ')ans--;
+        if(s[i] == ' ') ans--;
     }
     cout << ans;
     return 0;
