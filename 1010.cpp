@@ -3,7 +3,9 @@
 using namespace std;
 
 void print(int n){
-    int a[20],i = 0,cnt = 0;
+    int a[20];
+    int i = 0;
+    int cnt = 0;
     while(n){
         if(n & 1) a[cnt++] = i;
         i++;
