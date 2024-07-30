@@ -38,7 +38,7 @@ auto main() -> int
         // std::cout << " " << num << std::endl;
     }
     std::cout << shu << "=";
-    for(int i = cnt;i > 0;i--)
+    for (int i = cnt; i > 0; i--)
     {
         std::cout << ans[i];
     }

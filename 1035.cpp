@@ -1,11 +1,13 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     double Sn = 0;
-    int k,i;
+    int k, i;
     cin >> k;
-    for(i = 1;Sn - k <= 0;i++){
+    for (i = 1; Sn - k <= 0; i++)
+    {
         Sn += 1.0 / i;
     }
     cout << i - 1;

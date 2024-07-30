@@ -1,4 +1,4 @@
-#include <cstring>
+s#include <cstring>
 #include <iostream>
 #define BASE 10
 #define N    201
