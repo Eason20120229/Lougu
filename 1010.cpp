@@ -1,37 +1,52 @@
 #include <iostream>
 
-using namespace std;
-
-void print(int n){
+void print(int n)
+{
     int a[20];
     int i = 0;
     int cnt = 0;
-    while(n){
-        if(n & 1) a[cnt++] = i;
+    while (n != 0)
+    {
+        if (n & 1)
+        {
+            a[cnt++] = i;
+        }
         i++;
         n >>= 1;
     }
-    for(int i = cnt - 1;i >= 1;i--){
-        if(a[i] == 1) cout << "2+";
-        else if(a[i] == 0) cout << "2(0)+";
-        else{
-            cout << "2(";
+    for (int i = cnt - 1; i >= 1; i--)
+    {
+        if (a[i] == 1)
+        {
+            std::cout << "2+";
+        } else if (a[i] == 0)
+        {
+            std::cout << "2(0)+";
+        } else
+        {
+            std::cout << "2(";
             print(a[i]);
-            cout << ")+";
+            std::cout << ")+";
         }
     }
-    if(a[0] == 1) cout << "2";
-    else if(a[0] == 0) cout << "2(0)";
-    else{
-        cout << "2(";
+    if (a[0] == 1)
+    {
+        std::cout << "2";
+    } else if (a[0] == 0)
+    {
+        std::cout << "2(0)";
+    } else
+    {
+        std::cout << "2(";
         print(a[0]);
-        cout << ")";
+        std::cout << ")";
     }
 }
 
-int main(){
+int main()
+{
     int n;
-    cin >> n;
+    std::cin >> n;
     print(n);
     return 0;
 }
