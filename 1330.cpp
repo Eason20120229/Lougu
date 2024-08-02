@@ -1,3 +1,29 @@
+/*
+
+4 5
+1 2
+2 4
+3 4
+1 3
+1 4
+:Impossible
+
+5 5
+1 2
+2 4
+3 4
+1 3
+1 5
+:2
+
+5 3
+1 3
+1 5
+2 4
+:2
+
+*/
+
 #include <iostream>
 #define N 10001
 #define M 100001
@@ -33,7 +59,7 @@ void add(int start, int end)
     int idt = ++ecnt;
     edge[idt].id = end;
     edge[idt].next = head[start];
-    head[start] = end;
+    head[start] = idt;
 }
 
 bool dfs(int idt, bool color)
@@ -48,7 +74,7 @@ bool dfs(int idt, bool color)
     bool flag = true;
     for (int i = head[idt]; i != -1 && flag; i = edge[i].next)
     {
-        flag = flag && dfs(i, !color);
+        flag = flag && dfs(edge[i].id, !color);
     }
     return flag;
 }
