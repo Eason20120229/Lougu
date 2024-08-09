@@ -1,11 +1,16 @@
+#include <algorithm>
 #include <iostream>
 #define N 4001
-using std::ios, std::cin, std::cout;
+using std::ios, std::cin, std::cout, std::sort;
 
 struct block
 {
     int hei;
     int maxh;
+    auto operator<(const block &blk) const -> bool
+    {
+        return this->maxh < blk.maxh;
+    }
 };
 
 int num;
@@ -29,6 +34,6 @@ int main()
         }
     }
     num = tot;
-    ;
+    sort(arr + 1, arr + 1 + num);
     return 0;
 }
