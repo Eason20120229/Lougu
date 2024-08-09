@@ -1,44 +1,24 @@
-/*********************************************************************
-    程序名:
-    版权:
-    作者:
-    日期: 2023-10-19 19:25
-    说明:
-*********************************************************************/
+#include <algorithm>
 #include <cstdio>
 
-long long a[100000], b[2];
-long long c[99500][99500];
+int arr[200001], ans[2];
 
-int main() {
-	long long n;
-	scanf("%d", &n);
-	for (int i = 0; i < n; i++) {
-		scanf("%d", &a[i]);
-	}
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			if (i == j || a[j] == 0)
-				continue;
-			int t = 0;
-			if (c[i][j] != 0) {
-				t = c[i][j];
-			} else {
-				t = a[i] % a[j];
-				c[i][j] = t;
-			}
-			if (b[0] < t) {
-				b[1] = b[0];
-				b[0] = t;
-			} else if (b[1] < t && b[0] != t) {
-				b[1] = t;
-			}
-		}
-	}
-	if (b[1] == 0) {
-		printf("%d", -1);
-	} else {
-		printf("%d", b[1]);
-	}
-	return 0;
+int main()
+{
+    int num;
+    scanf("%d", &num);
+    for (int i = 1; i <= num; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    num = static_cast< int >(std::unique(arr + 1, arr + num + 1) - arr) - 1;
+    std::sort(arr + 1, arr + num + 1);
+    if (num < 2)
+    {
+        printf("-1");
+    } else
+    {
+        printf("%d", ans[1]);
+    }
+    return 0;
 }

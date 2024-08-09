@@ -3,157 +3,127 @@
 #include <utility>
 #define N    256
 #define M    65536
+#define LEN  10
 #define BASE 10
-#define NM   10001
+#define H                                 \
+    {                                     \
+        N - 1, N - 1, N - 1, N - 1, M - 1 \
+    }
 
-struct mystring
+using std::cout, std::cin, std::ios, std::string, std::endl;
+
+struct mystr
 {
-    std::string str;
-    int pos;
+    string cur;
+    int point;
 };
 
-struct myint
+struct
 {
-    int a, b, c, d, e;
-};
+    int arr[LEN];
+    int id;
+} server[M];
 
-int cnt = 0;
-myint server[NM];
+int cnt;
+char cur[LEN] = {'.', '.', '.', ':'};
+int arr[LEN];
+int high[LEN] = H;
 
-bool isNum(char chr)
+bool checkn(char chr)
 {
-    return chr <= '9' && chr >= '0';
+    return chr >= '0' && chr <= '9';
 }
 
-int readNum(mystring &str)
+auto readn(mystr &str, char cur, int high) -> int
 {
-    if (str.pos >= str.str.size() ||
-        (isNum(str.str[str.pos + 1]) && str.str[0] == '0') ||
-        !isNum(str.str[str.pos]))
+    bool flag = str.cur[str.point] == '0';
+    int ans = 0;
+    int len = 0;
+    if (!checkn(str.cur[str.point]))
     {
         return -1;
     }
-    int number = 0;
-    while (str.pos < str.str.size() && isNum(str.str[str.pos]))
+    while (checkn(str.cur[str.point]) && str.point < str.cur.size())
     {
-        number = number * BASE + (str.str[str.pos] - '0');
-        str.pos++;
+        ans = ans * BASE + str.cur[str.point] - '0';
+        str.point++;
+        if (ans > high)
+        {
+            return -1;
+        }
+        len++;
     }
-    return number;
+    if ((str.point < str.cur.size() && str.cur[str.point] != cur) ||
+        (flag && (ans != 0 || len > 1)))
+    {
+        return -1;
+    }
+    str.point++;
+    return ans;
 }
 
-bool check(std::string str, int arr[])
+bool check(string adr)
 {
-    mystring tmp = {std::move(str), 0};
-    int tnum = readNum(tmp);
-    if (tnum >= N || tnum < 0 || tmp.str[tmp.pos] != '.')
+    mystr add = {std::move(adr), 0};
+    for (int i = 0; i <= 4; i++)
     {
-        return false;
+        arr[i] = readn(add, cur[i], high[i]);
+        if (arr[i] == -1)
+        {
+            return false;
+        }
     }
-    tmp.pos++;
-    arr[1] = tnum;
-    tnum = readNum(tmp);
-    if (tnum >= N || tnum < 0 || tmp.str[tmp.pos] != '.')
-    {
-        return false;
-    }
-    arr[2] = tnum;
-    tmp.pos++;
-    tnum = readNum(tmp);
-    if (tnum >= N || tnum < 0 || tmp.str[tmp.pos] != '.')
-    {
-        return false;
-    }
-    arr[3] = tnum;
-    tmp.pos++;
-    tnum = readNum(tmp);
-    if (tnum >= N || tnum < 0 || tmp.str[tmp.pos] != ':')
-    {
-        return false;
-    }
-    arr[4] = tnum;
-    tmp.pos++;
-    tnum = readNum(tmp);
-    arr[5] = tnum;
-    if (tmp.pos < tmp.str.size())
-    {
-        return false;
-    }
-    return tnum < M && tnum != -1;
+    return add.point - 1 == add.cur.size();
 }
 
-auto main() -> int
+int main()
 {
     int num;
-    scanf("%d", &num);
-    while (num-- != 0)
+    cin >> num;
+    for (int i = 1; i <= num; i++)
     {
-        std::string address;
-        std::string opt;
-        std::cin >> opt >> address;
+        int pos = -1;
+        string opt;
+        string adr;
+        cin >> opt >> adr;
+        if (!check(adr))
+        {
+            cout << "ERR" << endl;
+            continue;
+        }
+        for (int i = 1; i <= cnt; i++)
+        {
+            bool tmp = true;
+            for (int j = 0; j <= 4; j++)
+            {
+                tmp &= arr[j] == server[i].arr[j];
+            }
+            if (tmp)
+            {
+                pos = i;
+                break;
+            }
+        }
         if (opt[0] == 'S')
         {
-            int arr[BASE];
-            if (!check(address, arr))
+            if (pos == -1)
             {
-                std::cout << "ERR" << "\n";
-                continue;
-            }
-            bool flag = true;
-            for (int i = 1; i <= cnt; i++)
-            {
-                if (server[i].a == arr[1] && server[i].b == arr[2] &&
-                    server[i].c == arr[3] && server[i].d == arr[4] &&
-                    server[i].e == arr[5])
-                {
-                    flag = false;
-                }
-            }
-            if (!flag)
-            {
-                std::cout << "FAIL" << "\n";
+                server[++cnt] = {{arr[0], arr[1], arr[2], arr[3], arr[4]}, i};
+                cout << "OK" << endl;
             } else
             {
-                std::cout << "OK" << "\n";
-                server[++cnt].a = arr[1];
-                server[cnt].b = arr[2];
-                server[cnt].c = arr[3];
-                server[cnt].d = arr[4];
-                server[cnt].e = arr[5];
+                cout << "FAIL" << endl;
             }
         } else
         {
-            int arr[BASE];
-            if (!check(address, arr))
+            if (pos != -1)
             {
-                std::cout << "ERR" << "\n";
-                continue;
-            }
-            bool flag = true;
-            int idt = 0;
-            for (int i = 1; i <= cnt; i++)
-            {
-                if (server[i].a == arr[1] && server[i].b == arr[2] &&
-                    server[i].c == arr[3] && server[i].d == arr[4] &&
-                    server[i].e == arr[5])
-                {
-                    flag = false;
-                    idt = i;
-                }
-            }
-            if (flag)
-            {
-                std::cout << "FAIL" << "\n";
+                cout << server[pos].id << endl;
             } else
             {
-                std::cout << idt << "\n";
+                cout << "FAIL" << endl;
             }
         }
     }
-    // for (int i = 1; i <= cnt; i++)
-    // {
-    //     std::cout << server[i].a << " " << server[i].b << " " << server[i].c
-    //               << " " << server[i].d << " " << server[i].e << std::endl;
-    // }
     return 0;
 }

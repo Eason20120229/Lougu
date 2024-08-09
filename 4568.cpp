@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#define N   10001
-#define M   1000001
+#define N   100001
+#define M   2000001
 #define INF 0x3f3f3f3f
 
 struct
@@ -17,6 +17,7 @@ int ecnt;
 int head[N];
 bool vis[N];
 int dis[N];
+// int pre[N];
 
 void init(int num, int cnt)
 {
@@ -42,28 +43,29 @@ void add(int start, int end, int value)
 void dij(int start)
 {
     std::priority_queue< std::pair< int, int > > pri;
-    for (int i = 1; i <= num; i++)
+    for (int i = 0; i < num * (fre + 1); i++)
     {
         dis[i] = INF;
     }
-    for (int i = 1; i <= num; i++)
-    {
-        vis[i] = false;
-    }
     dis[start] = 0;
-    pri.emplace(0, 0);
+    pri.emplace(0, start);
     while (!pri.empty())
     {
         int tmp = pri.top().second;
         pri.pop();
+        if (vis[tmp])
+        {
+            continue;
+        }
         // std::cout << "<" << tmp << std::endl;
         vis[tmp] = true;
         for (int j = head[tmp]; j != -1; j = edge[j].next)
         {
             int end = edge[j].end;
-            if (dis[end] > dis[tmp] + edge[j].value && !vis[end])
+            if (dis[end] > dis[tmp] + edge[j].value)
             {
                 dis[end] = dis[tmp] + edge[j].value;
+                // pre[end] = tmp;
                 pri.emplace(-dis[end], end);
             }
         }
@@ -75,7 +77,7 @@ auto main() -> int
     int start;
     int end;
     std::cin >> num >> cnt >> fre >> start >> end;
-    init(num * (fre + 1), cnt * 2 * fre);
+    init(num * (fre + 1), cnt * 2 * (fre + 1));
     for (int i = 0; i < cnt; i++)
     {
         int tstart;
@@ -93,22 +95,17 @@ auto main() -> int
             }
         }
     }
-    // out
-    // for (int i = 0; i < num * (fre + 1); ++i)
-    // {
-    //     std::cout << "st:" << i << std::endl;
-    //     for (int j = head[i]; j != -1; j = edge[j].next)
-    //     {
-    //         std::cout << edge[j].end << " " << edge[j].value << std::endl;
-    //     }
-    // }
     int ans = INF;
     dij(start);
     for (int i = 0; i <= fre; i++)
     {
         ans = std::min(dis[end + i * num], ans);
-        std::cout << dis[end + i * num] << " ";
+        // std::cout << dis[end + i * num] << " ";
     }
+    // for (int i = 0; i < num * (fre + 1); i++)
+    // {
+    //     std::cout << pre[i] << '-' << dis[i] << " ";
+    // }
     std::cout << ans;
     return 0;
 }
