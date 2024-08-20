@@ -10,7 +10,7 @@ struct node
 
 std::list< node > lis;
 
-int main()
+auto main() -> int
 {
     int num;
     std::cin >> num;
@@ -21,20 +21,20 @@ int main()
         if (lis.empty() || lis.back().type != tmp)
         {
             lis.push_back({1, tmp});
-            (--lis.end())->id.push_back(i);
+            lis.back().id.push_back(i);
         } else
         {
-            (--lis.end())->num++;
-            (--lis.end())->id.push_back(i);
+            lis.back().num++;
+            lis.back().id.push_back(i);
         }
     }
     while (!lis.empty())
     {
-        for (auto i = lis.begin(); i != lis.end(); i++)
+        for (auto &lit : lis)
         {
-            printf("%d ", i->id.front());
-            i->id.pop_front();
-            i->num--;
+            printf("%d ", lit.id.front());
+            lit.id.pop_front();
+            lit.num--;
         }
         for (auto i = lis.begin(); i != lis.end();)
         {
@@ -51,7 +51,6 @@ int main()
                     tmp2->id.splice(tmp2->id.end(), tmp->id);
                     lis.erase(tmp);
                 }
-                // std::cout << "--" << tmp->type << " " << tmp2->type;
                 i = ++tmp2;
             } else
             {

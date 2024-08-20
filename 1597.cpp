@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #define BASE 10
+#define N    11
 
 using std::cout, std::cin, std::string;
 
@@ -9,52 +10,38 @@ bool isNum(char chr)
     return chr >= '0' && chr <= '9';
 }
 
+int getid(char chr)
+{
+    switch (chr)
+    {
+    case 'a': return 1;
+    case 'b': return 2;
+    case 'c': return 3;
+    }
+    return 0;
+}
+
+int num[N];
+
 int main()
 {
-    int one;
-    int two;
-    int three;
     int left;
-    int right;
     string str;
     cin >> str;
     for (int i = 0; i < str.size(); i++)
     {
-        if (str[i] == 'a')
-        {
-            left = 1;
-            right = 0;
-        }
-        if (str[i] == 'b')
-        {
-            left = 2;
-            right = 0;
-        }
-        if (str[i] == 'c')
-        {
-            left = 3;
-            right = 0;
-        }
+        left = getid(str[i]);
+        i += 3;
         if (isNum(str[i]))
         {
-            right = right * BASE + (str[i] - '0');
-        }
-        if (str[i] == ';')
+            num[left] = str[i] - '0';
+            i++;
+        } else
         {
-            if (left == 1)
-            {
-                one = right;
-            }
-            if (left == 2)
-            {
-                two = right;
-            }
-            if (left == 3)
-            {
-                three = right;
-            }
+            num[left] = num[getid(str[i])];
+            i++;
         }
     }
-    cout << one << " " << two << " " << three;
+    cout << num[1] << " " << num[2] << " " << num[3];
     return 0;
 }
