@@ -91,7 +91,7 @@ BreakAfterJavaFieldAnnotations: false
 # 在二元运算符前换行
 BreakBeforeBinaryOperators: None
 # 在大括号前换行
-BreakBeforeBraces: Custom
+BreakBeforeBraces: Attach
 # 在concept前换行
 # BreakBeforeConceptDeclarations: Never
 # 在三元运算符前换行
@@ -103,7 +103,7 @@ BreakInheritanceList: AfterColon
 # 字符串换行样式
 BreakStringLiterals: false
 # 每行字符的限制，0表示没有限制
-ColumnLimit:     80
+ColumnLimit:     60
 # 描述具有特殊意义的注释的正则表达式，它不应该被分割为多行或以其它方式改变
 CommentPragmas:  '^ IWYU pragma:'
 # 在新行上声明每个命名空间

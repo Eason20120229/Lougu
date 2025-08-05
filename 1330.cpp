@@ -28,8 +28,7 @@
 #define N 10001
 #define M 100001
 
-struct edg
-{
+struct edg {
     int id;
     int next;
 };
@@ -42,45 +41,38 @@ bool pcol[N];
 int black;
 int white;
 
-void init(int num, int cnt)
-{
-    for (int i = 1; i <= num; i++)
-    {
+void init(int num, int cnt) {
+    for (int i = 1; i <= num; i++) {
         head[i] = -1;
     }
-    for (int i = 1; i <= cnt; i++)
-    {
+    for (int i = 1; i <= cnt; i++) {
         edge[i].next = -1;
     }
 }
 
-void add(int start, int end)
-{
+void add(int start, int end) {
     int idt = ++ecnt;
     edge[idt].id = end;
     edge[idt].next = head[start];
     head[start] = idt;
 }
 
-bool dfs(int idt, bool color)
-{
-    if (vis[idt])
-    {
+bool dfs(int idt, bool color) {
+    if (vis[idt]) {
         return pcol[idt] == color;
     }
     vis[idt] = true;
     pcol[idt] = color;
     color ? black++ : white++;
     bool flag = true;
-    for (int i = head[idt]; i != -1 && flag; i = edge[i].next)
-    {
+    for (int i = head[idt]; i != -1 && flag;
+         i = edge[i].next) {
         flag = flag && dfs(edge[i].id, !color);
     }
     return flag;
 }
 
-auto main() -> int
-{
+auto main() -> int {
     std::ios::sync_with_stdio(false);
     std::cout.tie(nullptr);
     std::cin.tie(nullptr);
@@ -89,8 +81,7 @@ auto main() -> int
     int ans = 0;
     std::cin >> num >> cnt;
     init(num, cnt);
-    while (cnt-- != 0)
-    {
+    while (cnt-- != 0) {
         int start;
         int end;
         std::cin >> start >> end;
@@ -98,12 +89,9 @@ auto main() -> int
         std::swap(start, end);
         add(start, end);
     }
-    for (int i = 1; i <= num; i++)
-    {
-        if (!vis[i])
-        {
-            if (!dfs(i, false))
-            {
+    for (int i = 1; i <= num; i++) {
+        if (!vis[i]) {
+            if (!dfs(i, false)) {
                 std::cout << "Impossible";
                 return 0;
             }

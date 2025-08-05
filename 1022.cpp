@@ -1,4 +1,4 @@
-s#include <bits/stdc++.h>
+#include <bits/stdc++.h>
 #define F 10
 
 using namespace std;

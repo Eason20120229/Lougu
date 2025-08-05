@@ -1,32 +1,36 @@
+#include <array>
 #include <iostream>
-#include <vector>
 #define N 100001
 
 auto main() -> int
 {
     int num = 0;
     int ans = 0;
-    std::vector< int > arr;
+    std::array< int, N > arr;
     std::cin >> num;
     for (int i = 1; i <= num; i++)
     {
-        int tmp;
-        std::cin >> tmp;
-        if (i == 1 || tmp > arr[arr.size() - 1])
-        {
-            arr.push_back(tmp);
-        }
+        std::cin >> arr[i];
     }
-    for (int i = 1; i < arr.size() - 1; i++)
+    int cur = 2;
+    while (cur < num)
     {
-        if (arr[i - 1] > arr[i] && arr[i + 1] > arr[i])
+        bool flag = false;
+        bool flag2 = false;
+        while (cur < num && arr[cur] >= arr[cur + 1])
+        {
+            cur++;
+            flag = true;
+        }
+        while (cur < num && arr[cur] <= arr[cur + 1])
+        {
+            cur++;
+            flag2 = true;
+        }
+        if (cur < num && flag && flag2)
         {
             ans++;
         }
-    }
-    for (int i = 0; i < arr.size(); i++)
-    {
-        std::cout << arr[i] << " ";
     }
     std::cout << ans;
     return 0;
