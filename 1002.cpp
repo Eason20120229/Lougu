@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <cstdio>
 using namespace std;
 
 long long dp[21][21] = {};
