@@ -1,48 +1,93 @@
-/*
-
-https://www.luogu.com.cn/problem/P2671
-
-*/
-
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-long long arr[100001];
+int dat[100001];
 
-long long color[100001];
+vector<int> a[100001][2];
+long long s1[100001],s2[100001],s3[100001];
 long long sum = 0;
 
-long long mod(long long x) {
+int mod(long long x){
     return x % 10007;
 }
 
-int main() {
-    int n;
-    int m;
+int main(){
+    int n,m;
     cin >> n >> m;
-    for (int i = 1; i <= n; i++) {
-        long long tmp;
-        cin >> tmp;
-        tmp = mod(tmp);
-        arr[i] = mod(arr[i - 1] + tmp);
+    for(int i = 1;i <= n;i++){
+        cin >> dat[i];
+        dat[i] = mod(dat[i]);
     }
-    for (int i = 1; i <= n; i++) {
-        long long c;
+    for(int i = 1;i <= n;i++){
+        int c;
         cin >> c;
-        color[i] = c;
+        a[c][i % 2].push_back(i);
     }
-    for (long long y = 1; y <= n; y++) {
-        long long tmp = 0;
-        if (y - 1 < n - y) {
-            tmp = arr[2 * y - 1] - (arr[y] - arr[y - 1]);
-        } else {
-            tmp = arr[n] - arr[2 * y - n - 1] -
-                  (arr[y] - arr[y - 1]);
+    for(int k = 1;k <= m;k++){
+        for(int i = 0;i < a[k][0].size();i++){
+            if(i == 0){
+                s1[i] = mod(a[k][0][i] * dat[a[k][0][i]]);
+                continue;
+            }
+            s1[i] = mod(s1[i - 1] + mod(a[k][0][i] * dat[a[k][0][i]]));
         }
-        sum += mod(mod(2 * y) * mod(tmp));
-        sum = mod(sum);
-        cout << sum << " ";
+        for(int i = 0;i < a[k][0].size();i++){
+            if(i == 0){
+                s2[i] = dat[a[k][0][i]];
+                continue;
+            }
+            s2[i] = mod(s2[i - 1] + dat[a[k][0][i]]);
+        }
+        for(int i = 0;i < a[k][0].size();i++){
+            if(i == 0){
+                s3[i] = a[k][0][i];
+                continue;
+            }
+            s3[i] = mod(s3[i - 1] + a[k][0][i]);
+        }
+        for(int i = 0;i < a[k][0].size();i++){
+            sum += mod(mod((a[k][0].size() - i - 1) * a[k][0][i]) * dat[a[k][0][i]]);
+            sum = mod(sum);
+            sum += mod(s1[a[k][0].size() - 1] - s1[i]);
+            sum = mod(sum);
+            sum += mod(a[k][0][i] * mod(s2[a[k][0].size() - 1] - s2[i]));
+            sum = mod(sum);
+            sum += mod(dat[a[k][0][i]] * mod(s3[a[k][0].size() - 1] - s3[i]));
+            sum = mod(sum);
+        }
+
+        for(int i = 0;i < a[k][1].size();i++){
+            if(i == 0){
+                s1[i] = mod(a[k][1][i] * dat[a[k][1][i]]);
+                continue;
+            }
+            s1[i] = mod(s1[i - 1] + mod(a[k][1][i] * dat[a[k][1][i]]));
+        }
+        for(int i = 0;i < a[k][1].size();i++){
+            if(i == 0){
+                s2[i] = dat[a[k][1][i]];
+                continue;
+            }
+            s2[i] = mod(s2[i - 1] + dat[a[k][1][i]]);
+        }
+        for(int i = 0;i < a[k][1].size();i++){
+            if(i == 0){
+                s3[i] = a[k][1][i];
+                continue;
+            }
+            s3[i] = mod(s3[i - 1] + a[k][1][i]);
+        }
+        for(int i = 0;i < a[k][1].size();i++){
+            sum += mod(mod((a[k][1].size() - i - 1) * a[k][1][i]) * dat[a[k][1][i]]);
+            sum = mod(sum);
+            sum += mod(s1[a[k][1].size() - 1] - s1[i]);
+            sum = mod(sum);
+            sum += mod(a[k][1][i] * mod(s2[a[k][1].size() - 1] - s2[i]));
+            sum = mod(sum);
+            sum += mod(dat[a[k][1][i]] * mod(s3[a[k][1].size() - 1] - s3[i]));
+            sum = mod(sum);
+        }
     }
-    cout << sum;
+    cout << mod(sum + 10007);
     return 0;
 }
