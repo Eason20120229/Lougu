@@ -7,10 +7,59 @@
 	},
 	"buffers":
 	[
+		{
+			"file": ".clang-format",
+			"settings":
+			{
+				"buffer_size": 7031,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
-	"build_system": "",
+	"build_system": "Packages/User/CppBuilder.sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/CppBuilder.sublime-build",
+					""
+				],
+				[
+					"Packages/User/CppBuilder.sublime-build",
+					"Run In Terminus(Debug)"
+				],
+				[
+					"Packages/User/CppBuilder.sublime-build",
+					"Run in CMD(Debug)"
+				],
+				[
+					"Packages/User/CppBuilder.sublime-build",
+					"Run In Terminus"
+				],
+				[
+					"Packages/User/CppBuilder.sublime-build",
+					"Run in CMD"
+				],
+				[
+					"Packages/User/CppBuilder.sublime-build",
+					"Run in Sublime"
+				]
+			],
+			[
+				"Packages/User/CppBuilder.sublime-build",
+				"Run in CMD(Debug)"
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
@@ -20,8 +69,16 @@
 		"selected_items":
 		[
 			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
 				"Package Control: ",
 				"Package Control: Install Package"
+			],
+			[
+				"them",
+				"Material Theme: Activate theme"
 			],
 			[
 				"Package Control: i",
@@ -52,11 +109,24 @@
 	],
 	"file_history":
 	[
+		"/D/Eason/Code/C++/Luogu/2340.cpp",
+		"/D/Eason/Code/C++/Luogu/tmptmp.cpp",
+		"/D/Eason/Code/C++/Luogu/game5.cpp",
+		"/D/Eason/Code/C++/Luogu/1002.cpp",
+		"/D/Eason/Code/C++/Luogu/2946.cpp",
+		"/D/Eason/Code/C++/Luogu/9688.cpp",
+		"/D/Eason/Code/C++/Luogu/10987.cpp",
+		"/D/Eason/Code/C++/Luogu/8703.cpp",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/Eason/Code/C++/Luogu/10721.cpp",
+		"/D/Eason/Code/C++/Luogu/Luogu.sublime-project",
+		"/D/Eason/Code/C++/Luogu/1279.cpp",
+		"/D/Eason/Code/C++/Luogu/3399().cpp",
 		"/C/Users/18134/AppData/Roaming/Sublime Text/Packages/User/CppBuilder.sublime-build"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 59.0
 	},
 	"find_in_files":
 	{
@@ -70,6 +140,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"]\n",
+			"max",
+			");\n",
+			"namespace",
+			"signed",
+			"j"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -91,12 +167,45 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": ".clang-format",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 7031,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///D:/Eason/Code/C%2B%2B/Luogu/.clang-format",
+							"syntax": "Packages/zzz A File Icon zzz/aliases/YAML (clang-format).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 59.0
 	},
 	"input":
 	{
@@ -125,6 +234,20 @@
 		]
 	},
 	"menu_visible": true,
+	"output.Debugger":
+	{
+		"height": 508.0,
+		"history":
+		[
+		]
+	},
+	"output.Debugger Console":
+	{
+		"height": 298.0,
+		"history":
+		[
+		]
+	},
 	"output.LSP Log Panel":
 	{
 		"height": 0.0,
@@ -139,7 +262,21 @@
 		[
 		]
 	},
+	"output.exec":
+	{
+		"height": 70.0,
+		"history":
+		[
+		]
+	},
 	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.mdpopups":
 	{
 		"height": 0.0,
 		"history":
@@ -150,7 +287,7 @@
 	"project": "Luogu.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 114.0
 	},
 	"save_all_on_build": true,
 	"select_file":

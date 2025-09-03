@@ -1,61 +1,45 @@
 #include <array>
 #include <iostream>
-#define N 401
+#define N    402
+#define M    400005
+#define endl '\n';
+#define INF  0x7f3f3f3f
 
-struct cow
-{
-    int s;
-    int f;
-    int sum;
-};
+namespace {
+    std::array< int, N > arrs;
+    std::array< int, N > arrf;
+    std::array< std::array< int, 2 >, (M * 2) + 1 > dparr;
+    int now, old = 1;
+};  // namespace
 
-std::array< int, N > arrs;
-std::array< int, N > arrf;
-std::array< std::array< cow, 2 >, N > dparr;
-
-auto main() -> int
-{
+auto main() -> int {
     int num;
     std::cin >> num;
-    for (int i = 1; i <= num; i++)
-    {
+    for (int i = 1; i <= num; i++) {
         std::cin >> arrs[i] >> arrf[i];
     }
-    for (int i = 1; i <= num; i++)
-    {
-        cow last;
-        if (dparr[i - 1][0].sum > dparr[i - 1][1].sum)
-        {
-            last = dparr[i - 1][0];
-        } else
-        {
-            last = dparr[i - 1][1];
-        }
-        cow tmp = {last.s + arrs[i], last.f + arrf[i]};
-        tmp.sum = tmp.s + tmp.f;
-        if (tmp.sum >= last.sum)
-        {
-            dparr[i][1] = tmp;
-        } else
-        {
-            dparr[i][1] = last;
-        }
-        dparr[i][0] = last;
-        std::cout << dparr[i][0].sum << " " << dparr[i][1].sum << " "
-                  << last.sum << std::endl;
+    for (int j = 0; j <= M * 2; j++) {
+        dparr[j][old] = -INF;
     }
-    int ans;
-    if (dparr[num][0].s < 0)
-    {
-        ans = dparr[num][1].sum;
-    } else if (dparr[num][1].s < 0)
-    {
-        ans = dparr[num][0].sum;
-    } else
-    {
-        ans = std::max(dparr[num][0].sum, dparr[num][1].sum);
+    dparr[M][old] = 0;
+    for (int i = 1; i <= num; i++) {
+        for (int j = M * 2; j >= 0; j--) {
+            dparr[j][now] = dparr[j][old];
+        }
+        for (int j = (M * 2) + std::min(arrs[i], 0); j >= arrs[i]; j--) {
+            if (dparr[j - arrs[i]][old] != -INF) {
+                dparr[j][now] =
+                    std::max(dparr[j][now], dparr[j - arrs[i]][old] + arrf[i]);
+            }
+        }
+        std::swap(old, now);
+    }
+    int ans = 0;
+    for (int j = M * 2; j >= M; j--) {
+        if (dparr[j][old] >= 0) {
+            ans = std::max(ans, j - M + dparr[j][old]);
+        }
     }
     std::cout << ans;
     return 0;
 }
-// tmp.s >= 0 && tmp.f >= 0
