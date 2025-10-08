@@ -1,0 +1,68 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Current File (external terminal)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "preLaunchTask": "clang++ build",
+            "noDebug": true
+        },
+        {
+            "name": "Run Current File (integrated terminal)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "clang++ build",
+            "noDebug": true
+        },
+        {
+            "name": "LLDB Debug Current File (external terminal)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "preLaunchTask": "clang++ build"
+        },
+        {
+            "name": "LLDB Debug Current File (integrated terminal)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "clang++ build"
+        },
+        {
+            "name": "Run Project",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/main",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "clang build project",
+            "noDebug": true
+        },
+        {
+            "name": "LLDB Debug Project",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/main",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "clang build project"
+        }
+    ]
+}
